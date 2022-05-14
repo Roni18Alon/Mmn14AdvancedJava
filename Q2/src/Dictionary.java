@@ -1,11 +1,12 @@
 /*
 Author: Roni Alon
-Mmn 14 -Q2 This class is a dictionary that implements with TreeMap - to keep the lexicographic order of keys in dict
+Mmn 14 -Q2 This class is a dictionary that implements with TreeMap- to keep the lexicographic order of keys in dict
  */
 
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.Serializable;
+import java.util.Locale;
 import java.util.Map;
 import java.util.TreeMap;
 
@@ -31,7 +32,7 @@ public class Dictionary implements Serializable {
         dictMap.put(key, value); //put method of tree map will change the value if the key already exists
     }
 
-    //if this key exists - return true , else - false
+    //if this key exists - return true ,else - false.I assume that for example the keys  roni and Roni aren't the same
     public boolean checkIfKeyExists(String key) {
         return dictMap.containsKey(key);
     }
