@@ -22,10 +22,8 @@ public class DictionaryController {
     private String value;
 
     public void initialize() {
-        JOptionPane.showMessageDialog(null, "Welcome to my dictionary application");
         d = new Dictionary();
     }
-
 
     @FXML
     void addItem(ActionEvent event) {
@@ -44,7 +42,6 @@ public class DictionaryController {
         }
     }
 
-
     @FXML
     void deleteItem(ActionEvent event) {
         key = getKey();
@@ -56,7 +53,6 @@ public class DictionaryController {
             }
             showNewContent(); //show the current content
         }
-
 
     }
 
@@ -148,7 +144,6 @@ public class DictionaryController {
             JOptionPane.showMessageDialog(null, "The key: " + key + " was successfully edited with value: " + value, "SUCCESS EDIT", JOptionPane.INFORMATION_MESSAGE);
             showNewContent();
         }
-
     }
 
     //returns a chosen file of dict to open
@@ -215,6 +210,4 @@ public class DictionaryController {
             }
         }
     }
-
-
 }
