@@ -22,6 +22,7 @@ public class DictionaryController {
     private String value;
 
     public void initialize() {
+        JOptionPane.showMessageDialog(null, "Welcome Roni's dictionary application");
         d = new Dictionary();
     }
 
