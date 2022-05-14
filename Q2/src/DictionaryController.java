@@ -47,7 +47,7 @@ public class DictionaryController {
         key = getKey();
         if (key != null) {
             if (!d.checkIfKeyExists(key)) { // if this key doesn't exists - can't edit
-                JOptionPane.showMessageDialog(null, "The key " + key + " doesn't exists ,Please try again", "Error", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(null, "The key- " + key + " doesn't exists ,Please try again", "Error", JOptionPane.ERROR_MESSAGE);
             } else {
                 d.deleteFromDict(key); //delete item from tree
             }
@@ -61,7 +61,7 @@ public class DictionaryController {
         key = getKey();
         if (key != null) {
             if (!d.checkIfKeyExists(key)) { // if this key doesn't exists - can't edit
-                JOptionPane.showMessageDialog(null, "The key " + key + " doesn't exists ,Please try again", "Error", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(null, "The key- " + key + " doesn't exists ,Please try again", "Error", JOptionPane.ERROR_MESSAGE);
             } else { //if it does exist
                 editDict();
             }
@@ -85,7 +85,7 @@ public class DictionaryController {
         key = getKey();
         if (key != null) {
             if (!d.checkIfKeyExists(key)) {
-                JOptionPane.showMessageDialog(null, "The key " + key + " doesn't exists ,Please try again", "Error", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(null, "The key- " + key + " doesn't exists ,Please try again", "Error", JOptionPane.ERROR_MESSAGE);
             } else {
                 JOptionPane.showMessageDialog(null, "The key: " + key + " has the value: " + d.getValue(key), "Search", JOptionPane.INFORMATION_MESSAGE);
             }
@@ -116,7 +116,7 @@ public class DictionaryController {
     //Get from the user the value of key
     private String getValue() {
         while (true) {
-            value = JOptionPane.showInputDialog("Enter value of '" + key + "' key");
+            value = JOptionPane.showInputDialog("Enter value to the key -" + key );
             if (value == null) return null;
             if (!value.isEmpty()) {
                 return value;
@@ -128,7 +128,7 @@ public class DictionaryController {
     //check if the user want to change the value of existed key in dict
     private void checkIfEdit() {
         String[] options = {"Yes", "No"};
-        int x = JOptionPane.showOptionDialog(null, "The key: '" + key + "' ,is already added with value : '" + d.getValue(key) + "' ,would you like to edit it instead?",
+        int x = JOptionPane.showOptionDialog(null, "The key: " + key + " ,is already added with value : " + d.getValue(key) + " ,would you like to edit it instead?",
                 "The key is located inside the dictionary - please select an option",
                 JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, options, options[0]);
         if (x == 0) {
